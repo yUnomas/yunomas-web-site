@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #1E1E1E;
+    --text-color: #D4D4D4;
+    --paragraph-color: #C4C4C4;
+    --surface-color: #2D2D2D;
+    --border-color: #444444;
+}
+body.light-theme{
+    --bg-color: #F5F5F5;
+    --text-color: #222222;
+    --paragraph-color: #555555;
+    --surface-color: #E5E5E5;
+    --border-color: #CCCCCC;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+header {
+    padding: 20px 20px 0 20px;
+    border-bottom: 1px solid var(--border-color);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+section {
+    margin-bottom: 40px;
+}
+h1 {
+    font-size: 28px;
+    margin: 0;
+}
+h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+p {
+    color: var(--paragraph-color);
+}
+footer {
+    border-top: 1px solid var(--border-color);
+    margin: 30px;    
+    padding: 20px;
+    text-align: center;
+}
+
+#game-container {
+    width: 100%;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    aspect-ratio: 16 / 9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#theme-toggle{
+    margin-left: auto;
+    padding: 8px 12px;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    header{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding-bottom: 16px;
+    }
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+    .header-actions p {
+        margin: 0;
+    }
+    main {
+        margin: 20px auto;
+        padding: 12px;
+    }
+
+    #game-container {
+        padding: 10px;
+    }
+    #theme-toggle {
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+}
