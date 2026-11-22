@@ -3,18 +3,18 @@
 }
 
 :root{
-    --bg-color: #1E1E1E;
-    --text-color: #D4D4D4;
-    --paragraph-color: #C4C4C4;
-    --surface-color: #2D2D2D;
-    --border-color: #444444;
-}
-body.light-theme{
     --bg-color: #F5F5F5;
     --text-color: #222222;
     --paragraph-color: #555555;
     --surface-color: #E5E5E5;
     --border-color: #CCCCCC;
+}
+body.dark-theme{
+    --bg-color: #1E1E1E;
+    --text-color: #D4D4D4;
+    --paragraph-color: #C4C4C4;
+    --surface-color: #2D2D2D;
+    --border-color: #444444;
 }
 
 body {
